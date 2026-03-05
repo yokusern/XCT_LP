@@ -19,103 +19,113 @@
 </head>
 
 <body class="bg-off-white text-gray-900 min-h-screen">
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold text-navy">XCT<span class="text-gold">.</span></a>
-            <a href="index.html" class="text-sm font-medium text-gray-500 hover:text-navy transition-colors">トップへ戻る</a>
+    <!-- Sticky Header -->
+    <header class="sticky-nav bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html"
+                class="text-3xl font-bold tracking-tighter text-navy hover:text-gold transition-colors duration-300">
+                XCT<span class="text-gold">.</span>
+            </a>
+            <a href="index.html"
+                class="text-xs font-bold text-gray-400 hover:text-navy transition-all duration-300">BACK TO HOME</a>
         </div>
-    </nav>
+    </header>
 
-    <main class="py-16 px-4">
+    <main class="py-24 px-6 pt-32">
         <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-12">
-                <h1 class="text-3xl md:text-5xl font-bold text-navy mb-4">Contact</h1>
-                <p class="text-gray-500">導入のご相談、審査への応募はこちらから受け付けております。</p>
+            <div class="text-center mb-16 reveal">
+                <h1 class="text-fluid-h1 text-navy font-bold mb-6">Contact</h1>
+                <p class="text-gray-500">導入のご相談、審査への応募はこちらからお願いいたします。</p>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-blue-50">
-                <form id="contactForm" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-16 border border-blue-50 reveal delay-100">
+                <form id="contactForm" class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
                         <div>
-                            <label for="org" class="block text-sm font-bold text-gray-700 mb-2">企業名・学校名</label>
+                            <label for="org"
+                                class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">企業名・学校名</label>
                             <input type="text" id="org" name="org" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all"
+                                class="w-full px-6 py-4 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-gold focus:ring-4 focus:ring-gold/5 outline-none transition-all duration-300"
                                 placeholder="株式会社XCT / ○○大学">
                         </div>
                         <div>
-                            <label for="name" class="block text-sm font-bold text-gray-700 mb-2">氏名</label>
+                            <label for="name"
+                                class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">代表者・担当者名</label>
                             <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all"
+                                class="w-full px-6 py-4 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-gold focus:ring-4 focus:ring-gold/5 outline-none transition-all duration-300"
                                 placeholder="山田 太郎">
                         </div>
                     </div>
 
                     <div>
-                        <label for="email" class="block text-sm font-bold text-gray-700 mb-2">メールアドレス</label>
+                        <label for="email"
+                            class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">メールアドレス</label>
                         <input type="email" id="email" name="email" required
-                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all"
+                            class="w-full px-6 py-4 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-gold focus:ring-4 focus:ring-gold/5 outline-none transition-all duration-300"
                             placeholder="example@xct.jp">
                     </div>
 
                     <div>
-                        <label for="plan" class="block text-sm font-bold text-gray-700 mb-2">ご希望のプラン / お問い合わせ種別</label>
+                        <label for="plan"
+                            class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">希望プラン /
+                            お問い合わせ種別</label>
                         <select id="plan" name="plan" required
-                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all appearance-none bg-white">
+                            class="w-full px-6 py-4 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-gold focus:ring-4 focus:ring-gold/5 outline-none transition-all duration-300 appearance-none bg-white">
                             <option value="">選択してください</option>
-                            <option value="success">成果報酬プラン (¥0/月)</option>
+                            <option value="success">成果報酬プラン (¥3,000/月)</option>
                             <option value="fixed">固定ミニマムプラン (¥5,000/月)</option>
                             <option value="scout">スカウト完全代行プラン (¥30,000/月)</option>
-                            <option value="student">精鋭学生コミュニティへの審査応募</option>
+                            <option value="student">精鋭学生としての審査応募</option>
                             <option value="other">その他のお問い合わせ</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="message" class="block text-sm font-bold text-gray-700 mb-2">メッセージ内容</label>
-                        <textarea id="message" name="message" rows="5"
-                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all"
+                        <label for="message"
+                            class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">メッセージ内容</label>
+                        <textarea id="message" name="message" rows="6"
+                            class="w-full px-6 py-4 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-gold focus:ring-4 focus:ring-gold/5 outline-none transition-all duration-300"
                             placeholder="ご質問や、現在の課題などをご記入ください。"></textarea>
                     </div>
 
-                    <div class="pt-4">
+                    <div class="pt-6">
                         <button type="submit" id="submitBtn"
-                            class="w-full py-4 btn-gold rounded-lg font-bold text-lg flex items-center justify-center space-x-2">
-                            <span>送信する</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="btn-gold w-full py-5 text-xl rounded-xl shadow-xl shadow-gold/10">
+                            <span>送信内容を確認して送る</span>
+                            <svg class="w-6 h-6 ml-3 transform group-hover:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                             </svg>
                         </button>
                     </div>
-
-                    <p class="text-[10px] text-gray-400 text-center mt-4">
-                        送信することで、当社のプライバシーポリシーに同意したものとみなされます。
-                    </p>
                 </form>
 
                 <!-- Success Message -->
-                <div id="successMessage" class="hidden text-center py-12">
+                <div id="successMessage" class="hidden text-center py-20">
                     <div
-                        class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                        class="w-24 h-24 bg-gold/10 text-gold rounded-full flex items-center justify-center mx-auto mb-10">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
                     </div>
-                    <h2 class="text-2xl font-bold mb-4">送信が完了しました</h2>
-                    <p class="text-gray-600 mb-8">お問い合わせありがとうございます。<br>担当者より3営業日以内にご連絡させていただきます。</p>
-                    <a href="index.html" class="text-navy font-bold hover:underline">トップページへ戻る</a>
+                    <h2 class="text-3xl font-bold text-navy mb-6">送信完了しました。</h2>
+                    <p class="text-gray-500 mb-10 text-lg leading-relaxed">
+                        お問い合わせありがとうございます。XCT運営事務局より、<br>
+                        3営業日以内にご連絡させていただきます。
+                    </p>
+                    <a href="index.html" class="text-gold font-bold hover:underline">トップページへ戻る</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="py-12 border-t border-gray-100 text-center">
-        <p class="text-gray-400 text-sm">&copy; 2026 Cross Consulting Team.</p>
+    <footer class="py-12 border-t border-gray-100 text-center text-sm text-gray-500">
+        <p>&copy; 2026 Cross Consulting Team. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
